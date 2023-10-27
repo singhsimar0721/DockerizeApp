@@ -1,0 +1,9 @@
+sudo: required
+services:
+ - docker
+
+before_install:
+ - docker build -t singhsimar0721/DockerizeApp .
+
+script:
+ - docker run -e CI=true -p 8080:8080 singhsimar0721/DockerizeApp 
