@@ -10,6 +10,6 @@ public class HomeCotroller {
 
 	@GetMapping("/greet")
 	public String greet() {
-		return "Hello, Welcome to Dockerization ";
+		return "Hello, Welcome to Dockerization services";
 	}
 }
