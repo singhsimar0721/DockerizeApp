@@ -8,15 +8,4 @@ before_install:
 script:
  - docker run -e CI=true -p 8080:8080 singhsimar0721/dockerize-app 
 
-deploy:
- provider:elasticbeanstalk
- region:eu-north-1
- app: "ec2-ebean-dockerize-app"
- env: "Ec2-ebean-dockerize-app-env"
- bucket_name:"elasticbeanstalk-eu-north-1-502575567923"
- bucket_path: "ec2-ebean-dockerize-app"
- on:
-  branch: master
- access_key_id: $AWS_ACCESS_KEY
- secret_access_key: "$AWS_SECRET_KEY"
  
